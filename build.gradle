@@ -3,6 +3,7 @@ buildscript {
         springBootVersion = '2.0.3.RELEASE'
     }
     repositories {
+        maven {url 'http://maven.aliyun.com/nexus/content/groups/public/'}
         mavenCentral()
     }
     dependencies {
@@ -28,8 +29,9 @@ repositories {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter')
+    compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
     testCompile('org.springframework.boot:spring-boot-starter-test')
 
     compile('org.springframework.boot:spring-boot-starter-web')
-    compile('org.springframework.boot:spring-boot-starter-data-elasticsearch')
+    compile('org.springframework.boot:spring-boot-starter-data-elasticsearch:1.5.10.RELEASE')
 }
