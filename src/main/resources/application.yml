@@ -6,7 +6,7 @@ spring:
     data:
         elasticsearch:
 #            cluster-name: nini
-            cluster-nodes: 127.0.0.1:9300
+            cluster-nodes: localhost:9300
 #            local: false
             repositories:
                 enable: true
