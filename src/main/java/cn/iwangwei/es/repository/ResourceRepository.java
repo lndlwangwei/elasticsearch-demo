@@ -8,8 +8,5 @@ import java.util.List;
 
 @Component
 public interface ResourceRepository extends ElasticsearchRepository<Resource, Integer> {
-
-    List<Resource> getAll();
-
     List<Resource> getAllByTitle(String title);
 }
