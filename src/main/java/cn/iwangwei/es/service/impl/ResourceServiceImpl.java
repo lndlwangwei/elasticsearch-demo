@@ -6,6 +6,7 @@ import cn.iwangwei.es.service.ResourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -15,7 +16,12 @@ public class ResourceServiceImpl implements ResourceService {
     private ResourceRepository resourceRepository;
 
     public List<Resource> getAll() {
-        return null;
+        List<Resource> result = new ArrayList<>();
+
+        Iterable<Resource> resources = resourceRepository.findAll();
+        resources.forEach(resource -> result.add(resource));
+
+        return result;
     }
 
     @Override
