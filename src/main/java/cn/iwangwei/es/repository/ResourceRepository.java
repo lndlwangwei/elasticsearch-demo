@@ -9,4 +9,6 @@ import java.util.List;
 @Component
 public interface ResourceRepository extends ElasticsearchRepository<Resource, Integer> {
     List<Resource> getAllByTitle(String title);
+
+    List<Resource> findByContentLike(String content);
 }
